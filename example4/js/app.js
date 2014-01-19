@@ -1,7 +1,7 @@
 $(function () { // wait for on-ready
 
   // Login / Auth stuff
-  var blogRef = new Firebase('https://dlmanning.firebaseio.com');
+  var blogRef = new Firebase('https://marbles.firebaseio.com');
   var auth = new FirebaseSimpleLogin(blogRef, function(error, user) {
     if (error) {
       console.log(error);
@@ -34,7 +34,7 @@ $(function () { // wait for on-ready
 
   var Posts = Backbone.Collection.extend({
     model: Post,
-    firebase: new Backbone.Firebase('https://dlmanning.firebaseio.com')
+    firebase: new Backbone.Firebase('https://marbles.firebaseio.com')
 //    localStorage: new Backbone.LocalStorage("posts")
   });
 
